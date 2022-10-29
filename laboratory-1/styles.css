@@ -460,6 +460,13 @@ header {
     box-shadow: 0 8px 8px var(--pricing-shadow);
 }
 
+.pricing--descRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .pricing--cardDesc {
     margin: 0 0 16px;
     font-weight: 700;
@@ -469,6 +476,25 @@ header {
     align-items: center;
     letter-spacing: 0.2px;
     color: var(--main-purple);
+}
+
+.pricing--sticker {
+    width: 90px;
+    box-sizing: border-box;
+    border: 1px solid var(--main-purple);
+    border-radius: 99px;
+    padding: 8px;
+
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--main-text-color);
 }
 
 .pricing--cardCost {
@@ -492,22 +518,31 @@ header {
 }
 
 .pricing--cardList {
-    list-style-image: url('./img/pricing/gray-check.svg');
+    padding: 0;
+    margin: 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
     align-items: flex-start;
     display: flex;
     flex-direction: column;
+    gap: 24px;
     color: var(--main-text-color);
 }
 
-#green-list > ul {
-    list-style-image: url('./img/pricing/green-check.svg');
+.pricing--cardList li  {
+    list-style: none;
+    padding-left: 48px;
+    background-image: url('./img/pricing/gray-check.svg');
+    background-repeat: no-repeat;
 }
 
-#yellow-list > ul {
-    list-style-image: url('./img/pricing/yellow-check.svg');
+#green-list > ul > li {
+    background-image: url('./img/pricing/green-check.svg');
+}
+
+#yellow-list > ul > li {
+    background-image: url('./img/pricing/yellow-check.svg');
 }
 
 .pricing--btn {
@@ -526,6 +561,7 @@ header {
     background-color: var(--main-white);
     border: 1px solid var(--main-gray);
     border-radius: 16px;
+    cursor: pointer;
 }
 
 #sub-reg {
