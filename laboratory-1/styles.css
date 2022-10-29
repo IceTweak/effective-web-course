@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Color variables */
+
+:root {
+    --main-white: white;
+    --main-purple: #6C5CE7;
+    --main-gray: #ADADAD;
+    --main-text-color: #2D3436;
+    --header-dots: #FDCB6E;
+    --pricing-shadow: #2632381F;
+    --text-shadow: #000000;
+    
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    max-height: 100vh;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    position: relative;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 135px;
+    height: 96px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    background: var(--main-white);
+    /* Поставить тень снизу */
+}
+
+.header--logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header--logoImg {
+    width: 70px;
+    height: 64px;
+}
+
+.header--title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: var(--main-text-color);
+}
+
+.header--nav {
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--main-purple);
+}
+
+.header--navList {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.header--links {
+    margin: 0 16px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.header--links > a {
+    text-decoration: none;
+}
+
+.header--dot {
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--header-dots);
+}
+
+.header--links:first-child {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+}
+
+.header--btn {
+    width: 170px;
+    margin: 16px 0;
+    cursor: pointer;  
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.25px;
+    color: var(--main-white);
+    text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-purple);
+    border-radius: 999px;
+    color: var(--main-white);
+    border: none;
+}
+
+/* Hero block */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero--rect {
+    position: absolute;
+    right: 0px;
+    top: 1px;
+    bottom: 530px;
+    z-index: 1;
+}
+
+.hero--dots {
+    position: absolute;
+    width: 209px;
+    height: 285px;
+    right: 0px;
+    top: 114px;
+    z-index: 1;
+}
+
+.hero--green {
+    position: absolute;
+    width: 191px;
+    height: 51px;
+    left: calc(50% - 191px/2 + 41.5px);
+    top: 238px;
+    z-index: 1;
+}
+
+.hero--title {
+    margin: 80px 135px 0;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 104px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -3px;
+    color: var(--main-text-color);
+    text-shadow: 0px 4px 0px var(--main-white);
+    z-index: 2;
+}
+
+.hero--titlePink {
+    color: #D63031;
+    white-space: pre-wrap;
+}
+
+.hero--subtitle {
+    margin-top: 16px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 77px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: -1px;
+    color: var(--main-text-color);
+    z-index: 2;
+}
+
+.hero--grid {
+    display: grid;
+    /* align-items: flex-end; */
+    margin: 64px 135px 80px;
+    /* grid-template-columns: repeat(12, 70px); */
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 30px;
+    z-index: 2;
+}
+
+    
+.hero--box1 { 
+    grid-area: 1 / 1 / 4 / 4;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--main-text-color);
+}
+
+.hero--box2 { 
+    grid-area: 9 / 7 / 16 / 11;
+    position: relative;
+}
+
+.hero--box3 { 
+    grid-area: 9 / 4 / 15 / 7;
+}
+
+.hero--box4 { 
+    grid-area: 3 / 1 / 13 / 4;
+    position: relative;
+    align-self: flex-end;
+}
+
+.hero--box5 { 
+    grid-area: 1 / 4 / 9 / 9;
+    position: relative;
+}
+
+.hero--box6 { 
+    grid-area: 13 / 1 / 15 / 4;
+    height: 82px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    color: var(--main-white);
+}
+
+.hero--box7 { 
+    grid-area: 9 / 11 / 14 / 13;
+}
+
+.hero--box8 { 
+    grid-area: 4 / 9 / 9 / 11;
+    align-self: flex-end;
+}
+
+.hero--box9 { 
+    grid-area: 4 / 11 / 9 / 13;
+    align-self: flex-end;  
+}
+
+.hero--box10 { 
+    grid-area: 3 / 9 / 4 / 13;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--main-text-color); 
+}
+.hero--gridImg {
+    object-fit: cover;
+    display: block; 
+}
+
+.grid-h3 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: var(--main-white);
+    text-shadow: 0px 4px 0px var(--text-shadow);
+}
+
+.box-2-text {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 16px;
+}
+
+.box-4-text {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: var(--main-white);
+}
+
+.box-4-text > b {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+}
+
+.box-5-text {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+/* Pros block */
+
+.pros {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 135px 80px;
+}
+
+.pros--title {
+    margin: 0 0 24px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+    color: var(--main-text-color);
+}
+
+.pros--info {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.25px;
+    color: var(--main-text-color);
+}
+
+.pros--cards {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.pros--card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.pros--cardImg {
+    width: 70px;
+    height: 70px;
+}
+
+.pros--cardTitle {
+    margin: 24px 0 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.25px;
+    color: var(--main-text-color);
+}
+
+.pros--cardInfo {
+    margin: 0 0 8px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--main-text-color);
+}
+
+.pros--cardBtn {
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    color: var(--main-purple);
+    background-color: var(--main-white);
+    border: 1px solid var(--main-gray);
+    border-radius: 16px;
+}
+
+/* Pricing block */
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 135px 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.pricing--title {
+    margin: 74px 0 0;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 77px;
+    letter-spacing: -1px;
+    color: var(--main-text-color);
+}
+
+.pricing--subtitle {
+    margin: 34px 0 40px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    color: var(--main-gray);
+    z-index: 2;
+}
+
+.pricing--purple {
+    color: var(--main-purple);
+}
+
+.pricing--yellowLine {
+    position: absolute;
+    width: 126px;
+    height: 12px;
+    left: calc(50% - 126px/2 - 7px);
+    top: 213px;
+    z-index: 1;
+}
+
+.pricing--cards {
+    display: flex;
+    width: 100%;
+    height: 536px;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.pricing--card {
+    padding: 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--main-white);
+    z-index: 2;
+}
+
+#yellow-list {
+    box-shadow: 0 8px 8px var(--pricing-shadow);
+}
+
+.pricing--cardDesc {
+    margin: 0 0 16px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+    color: var(--main-purple);
+}
+
+.pricing--cardCost {
+    margin: 0 0 24px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: baseline;
+    letter-spacing: -1px;
+    color: var(--main-text-color);
+}
+
+.pricing--cardPeriod {
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+}
+
+.pricing--cardList {
+    list-style-image: url('./img/pricing/gray-check.svg');
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-text-color);
+}
+
+#green-list > ul {
+    list-style-image: url('./img/pricing/green-check.svg');
+}
+
+#yellow-list > ul {
+    list-style-image: url('./img/pricing/yellow-check.svg');
+}
+
+.pricing--btn {
+    height: 64px;
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--main-purple);
+    background-color: var(--main-white);
+    border: 1px solid var(--main-gray);
+    border-radius: 16px;
+}
+
+#sub-reg {
+    color: var(--main-white);
+    background-color: var(--main-purple);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.25px;
+}
+
+.pricing--wigle {
+    position: absolute;
+    right: 600px;
+    left: 370px;
+    top: 706px;
+    z-index: 1;
+}
