@@ -8,6 +8,8 @@
     --main-gray: #ADADAD;
     --main-text-color: #2D3436;
     --header-dots: #FDCB6E;
+    --header-shadow_1: #26323814;
+    --header-shadow_2: #26323829;
     --pricing-shadow: #2632381F;
     --text-shadow: #000000;
     
@@ -15,12 +17,60 @@
 
 body {
     margin: 0 auto;
-    max-width: 1440px;
     max-height: 100vh;
     align-items: center;
     font-family: 'Inter';
     font-style: normal;
+}
+
+
+/* For now marked as shadow for header */
+
+.header-shadow {
+    margin: 0 auto;
+    width: 100%;
+    height: 96px;
+    z-index: 2;
+    background-color: var(--main-white);
+    box-shadow: 0 4px 8px var(--header-shadow);
+    box-shadow: 0 2px 4px var(--header-shadow_2);
+}
+
+/* 1440px block relative for rect and dots */
+
+.rect-dots {
+    margin: 0 auto;
+    width: 1440px;
     position: relative;
+}
+
+.rect {
+    position: absolute;
+    right: 0px;
+    top: 1px;
+    bottom: 530px;
+    z-index: 1;
+}
+
+.dots {
+    position: absolute;
+    width: 209px;
+    height: 285px;
+    right: 0px;
+    top: 114px;
+    z-index: 1;
+}
+
+/* Content wrap 1170 max-width */
+
+.content-wraper {
+    margin: 0 auto;
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    align-items: center;
 }
 
 /* Header */
@@ -28,7 +78,7 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    padding: 0px 135px;
+    width: 100%;
     height: 96px;
     justify-content: space-between;
     position: relative;
@@ -128,23 +178,6 @@ header {
     align-items: center;
 }
 
-.hero--rect {
-    position: absolute;
-    right: 0px;
-    top: 1px;
-    bottom: 530px;
-    z-index: 1;
-}
-
-.hero--dots {
-    position: absolute;
-    width: 209px;
-    height: 285px;
-    right: 0px;
-    top: 114px;
-    z-index: 1;
-}
-
 .hero--green {
     position: absolute;
     width: 191px;
@@ -155,7 +188,7 @@ header {
 }
 
 .hero--title {
-    margin: 80px 135px 0;
+    margin: 80px 0 0;
     font-weight: 800;
     font-size: 96px;
     line-height: 104px;
@@ -189,7 +222,7 @@ header {
 .hero--grid {
     display: grid;
     /* align-items: flex-end; */
-    margin: 64px 135px 80px;
+    margin: 64px 0 80px;
     /* grid-template-columns: repeat(12, 70px); */
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -313,7 +346,7 @@ header {
 .pros {
     display: flex;
     flex-direction: column;
-    margin: 80px 135px 80px;
+    margin: 80px 0 80px;
 }
 
 .pros--title {
@@ -397,15 +430,16 @@ header {
 
 .pricing {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    margin: 0 135px 80px;
+    margin-top: 74px;
     position: relative;
     z-index: 2;
 }
 
 .pricing--title {
-    margin: 74px 0 0;
+    margin: 0;
     font-weight: 900;
     font-size: 64px;
     line-height: 77px;
@@ -432,7 +466,7 @@ header {
     width: 126px;
     height: 12px;
     left: calc(50% - 126px/2 - 7px);
-    top: 213px;
+    top: 141px;
     z-index: 1;
 }
 
@@ -577,6 +611,6 @@ header {
     position: absolute;
     right: 600px;
     left: 370px;
-    top: 706px;
+    top: 640px;
     z-index: 1;
 }
