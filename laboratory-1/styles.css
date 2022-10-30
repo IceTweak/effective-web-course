@@ -144,7 +144,7 @@ header {
     color: var(--header-dots);
 }
 
-.header--links:first-child {
+.header--links:hover {
     font-weight: 700;
     font-size: 18px;
     line-height: 32px;
