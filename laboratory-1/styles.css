@@ -69,7 +69,7 @@ body {
 
 .content-wraper {
     margin: 0 auto;
-    width: 1170px;
+    max-width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,9 +137,6 @@ header {
 .header--dot {
     font-size: 18px;
     line-height: 32px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.2px;
     color: var(--header-dots);
 }
@@ -197,9 +194,6 @@ header {
     font-weight: 800;
     font-size: 96px;
     line-height: 104px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: -3px;
     color: var(--main-text-color);
     text-shadow: 0px 4px 0px var(--main-white);
@@ -216,9 +210,6 @@ header {
     font-weight: 900;
     font-size: 64px;
     line-height: 77px;
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
     letter-spacing: -1px;
     color: var(--main-text-color);
     z-index: 2;
@@ -226,9 +217,7 @@ header {
 
 .hero--grid {
     display: grid;
-    /* align-items: flex-end; */
     margin: 64px 0 80px;
-    /* grid-template-columns: repeat(12, 70px); */
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-gap: 30px;
@@ -359,8 +348,6 @@ header {
     font-weight: 700;
     font-size: 32px;
     line-height: 48px;
-    display: flex;
-    align-items: center;
     letter-spacing: -0.5px;
     color: var(--main-text-color);
 }
@@ -369,9 +356,7 @@ header {
     margin: 0;
     font-weight: 400;
     font-size: 24px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
+    line-height: 36px; 
     letter-spacing: -0.25px;
     color: var(--main-text-color);
 }
@@ -401,8 +386,6 @@ header {
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.25px;
     color: var(--main-text-color);
 }
@@ -478,9 +461,7 @@ header {
 .pricing--cards {
     display: flex;
     width: 100%;
-    height: 536px;
     flex-direction: row;
-    align-items: stretch;
     gap: 30px;
 }
 
@@ -511,8 +492,6 @@ header {
     font-weight: 700;
     font-size: 18px;
     line-height: 32px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.2px;
     color: var(--main-purple);
 }
@@ -558,7 +537,7 @@ header {
 
 .pricing--cardList {
     padding: 0;
-    margin: 0;
+    margin: 0 0 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
@@ -586,10 +565,7 @@ header {
 
 .pricing--btn {
     height: 64px;
-    position: absolute;
-    bottom: 32px;
-    left: 32px;
-    right: 32px;
+    margin-top: auto;
 
     font-weight: 700;
     font-size: 18px;
@@ -643,8 +619,6 @@ footer {
     font-weight: 800;
     font-size: 12px;
     line-height: 15px;
-    display: flex;
-    align-items: center;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     color: var(--main-gray);
