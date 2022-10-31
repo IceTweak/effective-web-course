@@ -88,7 +88,6 @@ header {
     position: relative;
     z-index: 2;
     background: var(--main-white);
-    /* Поставить тень снизу */
 }
 
 .header--logo {
@@ -106,6 +105,7 @@ header {
     font-weight: 700;
     font-size: 48px;
     line-height: 56px;
+    letter-spacing: -1px;
     color: var(--main-text-color);
 }
 
