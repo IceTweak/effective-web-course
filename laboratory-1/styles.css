@@ -497,6 +497,7 @@ header {
 
 .pricing--descRow {
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -787,12 +788,52 @@ input:focus {
     right: -135px;
 }
 
+/* Responsive */
+
 @media (max-width: 1170px) {
+
+    .content-wraper, .header-wraper {
+        max-width: 970px;
+    }
+
+    /* Hide absolute frames */
     .rect, .dots, .footer-wave {
         display: none;
     }
-    .content-wraper, .header-wraper {
-        max-width: 970px;
+
+    .pricing--wigle {
+        display: none;
+    }
+
+    /* Undisplay grid */
+    .hero--grid {
+        display: none;
+    }
+
+    
+    /* Pricing section */
+    
+    .pricing--cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .pricing--card {
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1 1 392px;
+        box-shadow: 0 8px 8px var(--pricing-shadow);
+    }
+
+    .pricing--cardList {
+        margin-bottom: 32px;
+    }
+    
+    .pricing--btn {
+        width: 100%;
     }
     
 }
