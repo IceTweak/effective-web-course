@@ -26,19 +26,6 @@ body {
     font-style: normal;
 }
 
-/* 1440px block relative for rect and dots */
-
-.rect-dots {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-}
-
 .rect {
     position: absolute;
     right: -135px;
@@ -798,4 +785,26 @@ input:focus {
     position: absolute;
     top: 422px;
     right: -135px;
+}
+
+@media (max-width: 1170px) {
+    .rect, .dots, .footer-wave {
+        display: none;
+    }
+    .content-wraper, .header-wraper {
+        max-width: 970px;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .content-wraper, .header-wraper {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-wraper, .header-wraper {
+        max-width: none;
+    }
 }
