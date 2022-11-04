@@ -379,7 +379,6 @@ header {
     display: flex;
     flex: 0 1 25%;
     flex-direction: row;
-    justify-content: space-between;
     gap: 30px;
 }
 
@@ -415,6 +414,7 @@ header {
 .pros--cardBtn {
     display: flex;
     padding: 8px 16px;
+    margin-top: auto;
     align-items: center;
     text-align: center;
     font-weight: 700;
@@ -824,7 +824,7 @@ input:focus {
     .pricing--card {
         justify-content: center;
         align-items: flex-start;
-        flex: 1 1 392px;
+        width: max-content;
         box-shadow: 0 8px 8px var(--pricing-shadow);
     }
 
@@ -838,14 +838,78 @@ input:focus {
     
 }
 
+/* Here adds burger menu */
+
 @media (max-width: 992px) {
     .content-wraper, .header-wraper {
         max-width: 750px;
     }
+
+    /* Pros section */
+    .pros--cards {
+        flex-wrap: wrap;
+    }
+
+    .pros--card {
+        width: 45%;
+    }
+
+    /* Footer section */
+
+    .links--grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }
 
 @media (max-width: 767px) {
+
     .content-wraper, .header-wraper {
         max-width: none;
+        min-width: 360px;
+        padding: 15px;
     }
+
+    /* Pros section */
+    .pros-icon {
+        display: none;
+    }
+    .pros--info {
+        padding: 0;
+    }
+
+    /* Footer section */
+
+    footer, .form-contacts, .form-sub {
+        flex-direction: column;
+    }
+
+    .form {
+        display: none;
+    }
+
+    .links--heading, .links--grid {
+        display: none;
+    }
+
+    .footer--form {
+        order: 1;
+    }
+
+    .footer--email {
+        align-self: center;
+        
+    }
+
+    .footer--links {
+        margin: 0;
+        order: 2;
+    }
+
+    .links--networks {
+        align-self: center;
+        margin: 0;
+        width: 80%;
+    }
+
 }
