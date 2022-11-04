@@ -117,6 +117,7 @@ header {
 }
 
 .header--title {
+    margin: 0;
     font-weight: 700;
     font-size: 48px;
     line-height: 56px;
@@ -890,11 +891,11 @@ input:focus {
 
     .header--wraper {
         position: fixed;
-        height: 72px;
     }
 
     .header--body {
         padding: 16px;
+        height: 72px;
     }
 
     .header--title {
@@ -984,6 +985,8 @@ input:focus {
     .header--links::after {
         display: none;
     }
+
+    /* Hero section */
 
     /* Pros section */
     .pros--cards {
