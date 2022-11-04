@@ -987,6 +987,15 @@ input:focus {
     }
 
     /* Hero section */
+    .hero--title {
+        font-size: 64px;
+        line-height: 77px;
+        width: 100%;
+    }
+
+    .hero--subtitle {
+        display: none;
+    }
 
     /* Pros section */
     .pros--cards {
