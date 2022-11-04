@@ -7,6 +7,7 @@
     --main-purple: #6C5CE7;
     --main-gray: #ADADAD;
     --main-text-color: #2D3436;
+    --header-burger: #5C5C5C;
     --header-dots: #FDCB6E;
     --header-shadow_1: #26323814;
     --header-shadow_2: #26323829;
@@ -56,28 +57,52 @@ body {
     align-items: center;
 }
 
-/* Header row wrap 1170 px */
-
-.header-wraper {
-    display: flex;
-    flex-direction: row;
-    width: 1170px;
-    justify-content: space-between;
-    position: relative;
-}
-
 /* Header */
 
 header {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 96px;
+    box-sizing: border-box;
     position: relative;
-    z-index: 2;
+    z-index: 10;
     background: var(--main-white);
     box-shadow: 0 4px 8px var(--header-shadow);
     box-shadow: 0 2px 4px var(--header-shadow_2);
+}
+
+.header::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-white);
+    z-index: 3;
+}
+
+/* Header wrap 1170 px */
+
+.header-wraper {
+    display: flex;
+    width: 1170px;
+    box-sizing: border-box;
+}
+
+.header--body {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    height: 96px;
+    align-items: center;
+    background-color: var(--main-white);
+}
+
+.header--burger {
+    display: none;
 }
 
 .header--logo {
@@ -97,6 +122,8 @@ header {
     line-height: 56px;
     letter-spacing: -1px;
     color: var(--main-text-color);
+    position: relative;
+    z-index: 5;
 }
 
 .header--nav {
@@ -152,8 +179,9 @@ header {
 
 .header--btn {
     width: 170px;
-    margin: 16px 0;
-    cursor: pointer;  
+    height: 64px;
+    position: relative;
+    z-index: 5;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
@@ -841,8 +869,120 @@ input:focus {
 /* Here adds burger menu */
 
 @media (max-width: 992px) {
-    .content-wraper, .header-wraper {
+    .content-wraper, 
+    .header-wraper,
+    .header--body {
         max-width: 750px;
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    /* Header section */
+    .header--burger {
+        display: block;
+        position: relative;
+        width: 18px;
+        height: 18px;
+        z-index: 3;
+    }
+
+    .header--wraper {
+        position: fixed;
+        height: 72px;
+    }
+
+    .header--body {
+        padding: 16px;
+    }
+
+    .header--title {
+        font-size: 24px;
+        line-height: 36px;
+        color: var(--header-burger);
+        padding-left: 11px;
+    }
+
+    .header--btn {
+        width: 128px;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    .header--logoImg {
+        display: none;
+    }
+
+    .header--burger > span {
+        position: absolute;
+        background-color: var(--header-burger);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 8px;
+        transition: all .3s ease 0s;
+    }
+
+    .header--burger::before,
+    .header--burger::after {
+        content: '';
+        background-color: var(--header-burger);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s ease 0s;
+    }
+
+    .header--burger::before {
+        top: 0;
+    }
+
+    .header--burger::after {
+        bottom: 0;
+    }
+
+    .header--burger.active span {
+        transform: scale(0);
+    }
+
+    .header--burger.active::before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    .header--burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 8px;
+    }
+
+    .header--nav {
+        position: fixed;
+        display: block;
+        align-items: center;
+        overflow: auto;
+        padding-top: 100px;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--main-white);
+        transition: all .3s ease 0s;
+    }
+
+    .header--nav.active {
+        top: 0;
+        height: 100%;
+    }
+
+    .header--navList {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .header--links::after {
+        display: none;
     }
 
     /* Pros section */
@@ -864,10 +1004,15 @@ input:focus {
 
 @media (max-width: 767px) {
 
-    .content-wraper, .header-wraper {
+    .content-wraper, 
+    .header-wraper,
+    .header--body {
         max-width: none;
-        min-width: 360px;
-        padding: 15px;
+        min-width: 320px;
+    }
+
+    .content-wraper {
+        padding: 0 15px;
     }
 
     /* Pros section */
@@ -909,7 +1054,7 @@ input:focus {
     .links--networks {
         align-self: center;
         margin: 0;
-        width: 80%;
+        width: fit-content;
     }
 
 }
