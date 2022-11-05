@@ -752,7 +752,7 @@ footer {
     gap: 30px;
 }
 
-input {
+input, textarea {
     width: 100%;
     box-sizing: border-box;
     outline: none;
@@ -766,7 +766,7 @@ input {
     background-color: var(--form-input-bg);
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline: 2px solid var(--form-purple-border);
 }
 
@@ -792,10 +792,11 @@ input:focus {
     display: flex;  
     align-items: stretch;
     flex: 3 370px;
-    background: url(./img/footer/form/edit.svg) no-repeat right;
+    background: url(./img/footer/form/edit.svg) no-repeat right top;
 }
 
-.form-msg > input {
+.form-msg > textarea, .form-msg > textarea::placeholder {
+    font-family: 'Inter';
     font-weight: 700;
     padding-bottom: 10px;
     font-size: 18px;
@@ -803,6 +804,7 @@ input:focus {
     letter-spacing: 0.2px;
     color: var(--main-purple);
     border: none;
+    resize: none;
 }
 
 .form-send {
