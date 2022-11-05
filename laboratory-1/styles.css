@@ -1048,6 +1048,24 @@ input:focus, textarea:focus {
         padding: 0;
     }
 
+    /* Pricing section */
+    .pricing--subtitle, .pricing--title {
+        align-self: flex-start;
+    }
+
+    .pricing--title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .pricing--subtitle {
+        margin: 8px 0 40px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
     /* Footer section */
 
     footer, .form-contacts, .form-sub {
