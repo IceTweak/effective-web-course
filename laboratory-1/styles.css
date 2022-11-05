@@ -821,7 +821,7 @@ input:focus {
 
 @media (max-width: 1170px) {
 
-    .content-wraper, .header-wraper {
+    .content-wraper {
         max-width: 970px;
     }
 
