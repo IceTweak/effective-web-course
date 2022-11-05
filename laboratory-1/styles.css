@@ -825,9 +825,8 @@ input:focus, textarea:focus {
 }
 
 .footer-wave {
-    position: absolute;
-    top: 422px;
-    right: -135px;
+    margin-top: 30px;
+    width: 100%;
 }
 
 /* Responsive */
