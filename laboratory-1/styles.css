@@ -879,8 +879,6 @@ input:focus, textarea:focus {
     
 }
 
-/* Here adds burger menu */
-
 @media (max-width: 992px) {
     .content-wraper, 
     .header-wraper,
