@@ -25,7 +25,10 @@ body {
     align-items: center;
     font-family: 'Inter';
     font-style: normal;
-    background: url('./img/footer/footer-wave.svg') bottom / 100% no-repeat;
+    background-image: url('./img/footer/footer-wave.svg'), url('./img/hero/rect-dots.svg');
+    background-position: bottom, top right;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .rect {
@@ -1031,7 +1034,10 @@ input:focus, textarea:focus {
     }
 
     body {
-        background: url('./img/footer/mobile-footer.svg') bottom left / 50% no-repeat;
+        background-image: url('./img/hero/mobile-bg.svg'), url('./img/footer/mobile-footer.svg');
+        background-position: top center, bottom left;
+        background-size: 100%, 50%;
+        background-repeat: no-repeat, no-repeat;
     }
 
     .content-wraper {
