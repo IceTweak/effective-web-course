@@ -981,13 +981,8 @@ input:focus, textarea:focus {
     }
 
     /* Hero section */
-    .hero--title {
-        font-size: 64px;
-        line-height: 77px;
-    }
-
     .hero--subtitle {
-        font-size: 24px;
+        font-size: 48px;
         font-weight: 700;
         align-items: center;
     }
@@ -1019,14 +1014,35 @@ input:focus, textarea:focus {
     }
 
     body {
-        background-image: url('./img/hero/mobile-bg.svg'), url('./img/footer/mobile-footer.svg');
-        background-position: top center, bottom left;
+        background-image: url('./img/hero/rect-dots.svg'), url('./img/footer/mobile-footer.svg');
+        background-position: top right, bottom left;
         background-size: 100%, 50%;
         background-repeat: no-repeat, no-repeat;
     }
 
     .content-wraper {
         padding: 0 15px;
+    }
+
+    /* Hero section */
+    .hero--title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .hero--titleBold {
+        display: inline-block;
+        white-space: pre-wrap;
+        font-size: 64px;
+        width: 100%;
+        font-weight: 900;
+
+    }
+
+    .hero--subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        align-items: center;
     }
 
     /* Pros section */
