@@ -213,6 +213,7 @@ header {
 
 .hero--titlePink {
     color: #D63031;
+    display: inline-block;
     white-space: pre-wrap;
     position: relative;
     z-index: 2;
@@ -983,11 +984,12 @@ input:focus, textarea:focus {
     .hero--title {
         font-size: 64px;
         line-height: 77px;
-        width: 100%;
     }
 
     .hero--subtitle {
-        display: none;
+        font-size: 24px;
+        font-weight: 700;
+        align-items: center;
     }
 
     /* Pros section */
