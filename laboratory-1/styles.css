@@ -1055,36 +1055,48 @@ input:focus, textarea:focus {
 
     /* Footer section */
 
+    footer {
+        padding-bottom: 30%;
+    }
+
     footer, .form-contacts, .form-sub {
         flex-direction: column;
     }
 
-    .form {
-        display: none;
-    }
-
-    .links--heading, .links--grid {
-        display: none;
-    }
-
-    .footer--form {
-        order: 1;
-    }
-
-    .footer--email {
-        align-self: center;
-        
-    }
-
-    .footer--links {
-        margin: 0;
-        order: 2;
+    .links--heading {
+        text-align: center;
     }
 
     .links--networks {
         align-self: center;
+        margin-top: 16px;
+    }
+
+    .links--grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .link-grid {
+        text-align: center;
+    }
+
+    .footer--email {
+        align-self: center;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .footer--form, .footer--links {
         margin: 0;
-        width: fit-content;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .form-send {
+        width: 50%;
+        align-self: center;
     }
 
 }
