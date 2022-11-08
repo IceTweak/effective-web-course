@@ -819,17 +819,7 @@ input:focus, textarea:focus {
         max-width: 970px;
     }
 
-    /* Hide absolute frames */
-    .rect, .dots {
-        display: none;
-    }
-
     .pricing--wigle {
-        display: none;
-    }
-
-    /* Undisplay grid */
-    .hero--grid {
         display: none;
     }
 
