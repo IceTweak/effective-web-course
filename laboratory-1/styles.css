@@ -31,23 +31,6 @@ body {
     background-repeat: no-repeat, no-repeat;
 }
 
-.rect {
-    position: absolute;
-    right: -135px;
-    top: 1px;
-    bottom: 530px;
-    z-index: 1;
-}
-
-.dots {
-    position: absolute;
-    width: 209px;
-    height: 285px;
-    right: -135px;
-    top: 114px;
-    z-index: 1;
-}
-
 /* Content column wrap 1170 px */
 
 .content-wraper {
