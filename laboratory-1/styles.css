@@ -1118,3 +1118,12 @@ input:focus, textarea:focus {
     }
 
 }
+
+@media (max-width: 360px) {
+    body {
+        background-image: url('./img/hero/mobile-bg.svg'), url('./img/footer/mobile-footer.svg');
+        background-position: top center, bottom left;
+        background-size: 100%, 50%;
+        background-repeat: no-repeat, no-repeat;
+    }
+}
