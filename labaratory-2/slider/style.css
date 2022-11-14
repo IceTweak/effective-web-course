@@ -12,15 +12,16 @@
     overflow: hidden;
     height: 500px;
     width: 800px;
+    border-radius: 20px;
 }
 
 .slides {
     display: flex;
+    height: 100%;
 }
 
 .slide {
     min-width: 100%;
-    flex: 1 0 100%;
 }
 
 .slide > img {
@@ -33,6 +34,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0 15px;
     width: 100%;
     display: flex;
     justify-content: space-between;
