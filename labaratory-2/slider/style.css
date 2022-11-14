@@ -1,0 +1,52 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    width: 900px;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    min-width: 100%;
+    flex: 1 0 100%;
+}
+
+.slide > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-btns {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#next, #prev {
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    font-size: 30px;
+    border: none;
+    border-radius: 99px;
+    padding: 10px;
+    color: rgb(67, 255, 114);
+}
