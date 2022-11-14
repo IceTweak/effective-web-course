@@ -5,11 +5,13 @@
 }
 
 .container {
-    margin: 0 auto;
+    margin: 30px auto;
+    display: flex;
     align-items: center;
     position: relative;
-    height: 600px;
-    width: 900px;
+    overflow: hidden;
+    height: 500px;
+    width: 800px;
 }
 
 .slides {
@@ -49,4 +51,13 @@
     border-radius: 99px;
     padding: 10px;
     color: rgb(67, 255, 114);
+}
+
+#next:focus, 
+#prev:focus {
+    outline: none;
+}
+
+i {
+    pointer-events: none;
 }
