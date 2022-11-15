@@ -57,3 +57,15 @@ slideContainer.addEventListener('mouseleave', startSlide);
 
 nextBtn.addEventListener('click', () => move('next'));
 prevBtn.addEventListener('click', () => move('prev'));
+
+window.addEventListener('keyup', (event) => {
+    switch (event.keyCode) {
+        case 32: move('next');
+        break;
+        case 39: move('next');
+        break;
+        case 37: move('prev');
+        break;
+        default: break; 
+    }
+})
