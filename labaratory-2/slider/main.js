@@ -35,6 +35,8 @@ const startSlide = () => {
     }, interval);
 };
 
+startSlide();
+
 slide.addEventListener('transitionend', () => {
     slides = getSlides();
     if (slides[index].id === firstClone.id) {
@@ -55,12 +57,18 @@ slideContainer.addEventListener('mouseenter', () => {
 
 slideContainer.addEventListener('mouseleave', startSlide);
 
-nextBtn.addEventListener('click', () => move('next'));
-prevBtn.addEventListener('click', () => move('prev'));
+nextBtn.addEventListener('click', () => {
+    move('next');
+    clearInterval(autoSlide);
+});
+prevBtn.addEventListener('click', () => {
+    move('prev');
+    clearInterval(autoSlide);
+});
 
 window.addEventListener('keyup', (event) => {
-    switch (event.key) {
-        case " ": move('next');
+    switch (event.code) {
+        case "Space": move('next');
         break;
         case "ArrowRight": move('next');
         break;
