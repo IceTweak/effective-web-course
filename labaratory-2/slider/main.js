@@ -19,7 +19,7 @@ slide.prepend(lastClone);
 
 const slideWidth = slides[index].clientWidth;
 
-const getSlides = () => (document.querySelectorAll('.slide'));
+const getSlides = () => document.querySelectorAll('.slide');
 
 const move = (slideTo) => {
     slides = getSlides();
@@ -42,6 +42,11 @@ slide.addEventListener('transitionend', () => {
         index = 1;
         slide.style.transform = `translateX(${-slideWidth * index}px)`;
     }
+    if (slides[index].id === lastClone.id) {
+        slide.style.transition = 'none';
+        index = slides.length - 2;
+        slide.style.transform = `translateX(${-slideWidth * index}px)`;
+    }
 });
 
 slideContainer.addEventListener('mouseenter', () => {
@@ -50,5 +55,5 @@ slideContainer.addEventListener('mouseenter', () => {
 
 slideContainer.addEventListener('mouseleave', startSlide);
 
-nextBtn.addEventListener('click', move('next'));
-prevBtn.addEventListener('click', move('prev'));
+nextBtn.addEventListener('click', () => move('next'));
+prevBtn.addEventListener('click', () => move('prev'));
