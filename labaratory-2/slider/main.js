@@ -59,13 +59,12 @@ nextBtn.addEventListener('click', () => move('next'));
 prevBtn.addEventListener('click', () => move('prev'));
 
 window.addEventListener('keyup', (event) => {
-    switch (event.keyCode) {
-        case 32: move('next');
+    switch (event.key) {
+        case " ": move('next');
         break;
-        case 39: move('next');
+        case "ArrowRight": move('next');
         break;
-        case 37: move('prev');
+        case "ArrowLeft": move('prev');
         break;
-        default: break; 
     }
 })
