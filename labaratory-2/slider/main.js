@@ -4,7 +4,9 @@ const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 const interval = 3000;
 
-let slides = document.querySelectorAll('.slide');
+const getSlides = () => document.querySelectorAll('.slide');
+
+let slides = getSlides();
 let index = 1;
 let autoSlide;
 
@@ -18,8 +20,6 @@ slide.append(firstClone);
 slide.prepend(lastClone);
 
 const slideWidth = slides[index].clientWidth;
-
-const getSlides = () => document.querySelectorAll('.slide');
 
 const move = (slideTo) => {
     slides = getSlides();
